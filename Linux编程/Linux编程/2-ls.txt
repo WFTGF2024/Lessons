@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // 使用system函数调用系统的ls命令来列出当前目录下的文件
+    int result = system("ls");
+    if (result == -1) {
+        perror("执行system函数出错");
+        return 1;
+    }
+    return 0;
+}
